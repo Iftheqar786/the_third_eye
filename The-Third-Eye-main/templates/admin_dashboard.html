@@ -1,0 +1,21 @@
+<!-- Extending the base template -->
+{% extends 'base.html' %}
+
+<!-- Highlight item in the sidebar -->
+{% block dashboard %}sidebar-selected{% endblock %}
+
+<!-- Main content of the body -->
+{% block main_content %}
+    <!-- <div class="col-auto">
+      <div class="img_container border p-4">
+        <p class="text-center">Camera 1</p>
+      </div>
+    </div> -->
+    <div class="camera-container border rounded">
+        <center>
+            <img class="camera-image img-fluid" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Camera Feed">
+        </center>
+    </div>
+    <h6>Camera 1</h6>
+{% endblock %}
+
